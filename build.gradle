@@ -2,7 +2,6 @@ import com.github.spotbugs.snom.SpotBugsTask
 import java.text.SimpleDateFormat
 
 plugins {
-    id "com.github.spotbugs" version "5.0.9"
     id 'com.github.johnrengelman.shadow' version '7.1.2'
     id 'java'
 }
@@ -69,17 +68,6 @@ test {
 processResources {
     filesMatching("**/plugin.yml") {
         expand ( NAME: rootProject.name, VERSION: version, PACKAGE: project.group.toString() )
-    }
-}
-
-tasks.withType(SpotBugsTask) {
-    reports {
-        xml {
-            required.set(false)
-        }
-        html {
-            required.set(true)
-        }
     }
 }
 
