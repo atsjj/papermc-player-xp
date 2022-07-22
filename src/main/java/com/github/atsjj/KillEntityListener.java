@@ -24,8 +24,10 @@ public class KillEntityListener implements Listener {
 
     losingPlayer.setExp(0);
     losingPlayer.setLevel(0);
+    PlayerUtils.takeHeart(losingPlayer);
 
     winningPlayer.giveExp(losingPlayerExperience);
+    PlayerUtils.giveHeart(winningPlayer);
 
     losingPlayer.sendMessage(message);
     winningPlayer.sendMessage(message);
