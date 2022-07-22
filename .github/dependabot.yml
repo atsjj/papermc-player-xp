@@ -6,7 +6,7 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "build:"
-    target-branch: "main"
+    target-branch: "master"
     reviewers:
       - "leviem1"
   - package-ecosystem: "gradle"
@@ -15,6 +15,6 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "deps:"
-    target-branch: "main"
+    target-branch: "master"
     reviewers:
       - "leviem1"
